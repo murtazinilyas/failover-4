@@ -198,12 +198,12 @@ Ansible-playbook для установки nginx
 
 2. Скриншоты статуса балансировщика и целевой группы:
 
-![Целевая группа]()
-![Статус балансировщика и состояния ВМ в целевой группе]()
+![Целевая группа](https://github.com/murtazinilyas/failover-4/blob/main/scshots/cf1-1.png)
+![Статус балансировщика и состояния ВМ в целевой группе](https://github.com/murtazinilyas/failover-4/blob/main/scshots/cf1-2.png)
 
 3. Скриншот страницы при запросе IP-адреса балансировщика:
 
-![Стартовая страница nginx по адресу балансировщика]()
+![Стартовая страница nginx по адресу балансировщика](https://github.com/murtazinilyas/failover-4/blob/main/scshots/cf1-3.png)
 
 ---
 
@@ -243,7 +243,7 @@ data "yandex_compute_image" "ubuntu_2404_lts" {
 resource "yandex_compute_instance_group" "ig-sflt-51-mia" {
   name        = "ig-sflt-51-mia"
   folder_id           = var.folder_id
-  service_account_id  = "ajemrjf2h6kj8fvg2vov"
+  service_account_id  = "var.sa_id"
   deletion_protection = "false"
   
   instance_template {
@@ -361,10 +361,10 @@ runcmd:
 
 2. Скриншоты статуса балансировщика и целевой группы:
 
-![Целевая группа задание 2]()
-![Статус балансировщика и состояния ВМ в целевой группе задание 2]()
+![Целевая группа задание 2](https://github.com/murtazinilyas/failover-4/blob/main/scshots/cf2-1.png)
+![Статус балансировщика и состояния ВМ в целевой группе задание 2](https://github.com/murtazinilyas/failover-4/blob/main/scshots/cf2-2.png)
 
-3. Скриншот страницы при запросе IP-адреса балансировщика:
+3. Скриншоты страницы при запросе IP-адреса балансировщика и выполнения команды curl на адрес балансировщика через консоль:
 
-![Стартовая страница nginx по адресу балансировщика задание 2]()
-![Результат нескольких обращений через curl на адрес балансировщика]()
+![Стартовая страница nginx по адресу балансировщика задание 2](https://github.com/murtazinilyas/failover-4/blob/main/scshots/cf2-3-2.png)
+![Результат нескольких обращений через curl на адрес балансировщика](https://github.com/murtazinilyas/failover-4/blob/main/scshots/cf2-3.png)
